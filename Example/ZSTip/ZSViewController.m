@@ -7,6 +7,7 @@
 //
 
 #import "ZSViewController.h"
+#import "WYBroadcastingTipView.h"
 
 @interface ZSViewController ()
 
@@ -17,7 +18,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    WYBroadcastingTipView *tipView = [[WYBroadcastingTipView alloc]initWithTitle:@"标题" subTitle:nil description:@"描述"];
+    [self.view addSubview:tipView];
+    [tipView showWithAnimationCompletion:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
